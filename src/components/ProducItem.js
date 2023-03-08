@@ -9,21 +9,21 @@ import { useContext } from "react"
 import ProductContext from "../store.js/product-context"
 
 
-const ProductItem = ({ id, isAddedToCart, title, img, price, comparePrice, onSale, }) => {
+const ProductItem = ({ id, isAddedToCart, title, img, price, comparePrice, onSale, onAddItem }) => {
 
-    const { addItem } = useContext(ProductContext)
+
 
     const addToCartHandler = () => {
 
-        addItem(id)
+        onAddItem(id)
 
         window.scrollTo(0, 0);
-        // console.log(id)
+        console.log(id)
     }
 
     return (
 
-        <Card sx={{ maxWidth: 345, pb: 1 }}>
+        <Card sx={{ maxWidth: 345, pb: 1 }} className={onSale && "on-sale"}>
             <CardMedia sx={{ height: 200 }} image={img} />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" textAlign="center">

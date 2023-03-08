@@ -1,7 +1,7 @@
 
 
 const Banner = () => {
-
+    console.log("banner")
     return (
         <div className="banner">
             <div>

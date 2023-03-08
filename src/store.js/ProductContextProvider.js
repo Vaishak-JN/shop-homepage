@@ -1,12 +1,15 @@
 import ProductContext from "./product-context";
 import { ProductsData } from "../PRODUCTS-DATA";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
 const ProductContextProvider = ({ children }) => {
-
     const [products, setProducts] = useState(ProductsData)
+
+
+    console.log("hi")
+
 
 
     const addItemToCartHandler = (id) => {
@@ -29,7 +32,7 @@ const ProductContextProvider = ({ children }) => {
         cartItems: products.filter(p => p.isAddedToCart).length
     }
 
-    console.log(products)
+    // console.log(data)
 
     return (
         <ProductContext.Provider value={data}>

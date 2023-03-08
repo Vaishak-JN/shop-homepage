@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+
 import './App.css';
 import Banner from './components/Banner';
 import Navbar from './components/NavBar';
@@ -7,7 +7,7 @@ import ProductContextProvider from './store.js/ProductContextProvider';
 
 
 function App() {
-
+  console.log("app")
   return (
     <ProductContextProvider>
       <Navbar />

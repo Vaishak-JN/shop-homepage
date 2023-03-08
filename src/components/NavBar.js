@@ -14,7 +14,7 @@ import ProductContext from '../store.js/product-context';
 const Navbar = () => {
 
     const { cartItems } = useContext(ProductContext)
-
+    console.log("nav")
     return (
         <Box sx={{ flexGrow: 1 }} >
             <AppBar position="static" color="transparent">

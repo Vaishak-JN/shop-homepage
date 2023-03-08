@@ -5,11 +5,12 @@ import ProductItem from "./ProducItem"
 
 const Products = () => {
 
-    const { products } = useContext(ProductContext)
+    const { products, addItem } = useContext(ProductContext)
+    console.log("products")
 
     return (
         <div className="product-grid">
-            {products.map(product => <ProductItem key={product.id} {...product} />)}
+            {products.map(product => <ProductItem key={product.id} {...product} onAddItem={addItem} />)}
         </div>
     )
 }

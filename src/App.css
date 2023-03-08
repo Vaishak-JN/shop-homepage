@@ -38,3 +38,17 @@
   grid-template-columns: auto auto auto auto;
   gap:40px;
 }
+.on-sale{
+  position: relative;
+}
+
+.on-sale::after{
+  content: "On Sale";
+  background-color: black;
+  color:white;
+  position:absolute;
+  top:5%;
+  right:5%;
+  padding:6px;
+  border-radius: 5px;
+}
