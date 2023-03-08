@@ -31,3 +31,9 @@
   margin:20px 0;
   font-size: 50px;
 }
+.product-grid{
+  padding:50px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap:40px;
+}

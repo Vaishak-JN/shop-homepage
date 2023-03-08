@@ -27,7 +27,9 @@ const Navbar = () => {
                     <Typography variant="h6" component="div" sx={{ m: 1 }} >
                         About
                     </Typography>
-                    <Button color="inherit" sx={{ flexGrow: 1, justifyContent: 'flex-end' }} ><ShoppingCartIcon /> Cart <span className="cart-total">{cartTotal}</span></Button>
+                    <Button variant="outlined" color="inherit" sx={{ ml: "auto" }}>
+                        <ShoppingCartIcon /> Cart <span className="cart-total">{cartTotal}</span>
+                    </Button>
                 </Toolbar>
             </AppBar>
         </Box>
