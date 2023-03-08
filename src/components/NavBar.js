@@ -7,12 +7,13 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
+import { useState, useContext } from "react"
+import ProductContext from '../store.js/product-context';
 
 
 const Navbar = () => {
 
-    const [cartTotal, setCartTotal] = React.useState(0)
+    const { cartItems } = useContext(ProductContext)
 
     return (
         <Box sx={{ flexGrow: 1 }} >
@@ -28,7 +29,7 @@ const Navbar = () => {
                         About
                     </Typography>
                     <Button variant="outlined" color="inherit" sx={{ ml: "auto" }}>
-                        <ShoppingCartIcon /> Cart <span className="cart-total">{cartTotal}</span>
+                        <ShoppingCartIcon /> Cart <span className="cart-total">{cartItems}</span>
                     </Button>
                 </Toolbar>
             </AppBar>

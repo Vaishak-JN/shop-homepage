@@ -1,10 +1,15 @@
-import { ProductsData } from "../PRODUCTS-DATA"
+
+import { useContext } from "react"
+import ProductContext from "../store.js/product-context"
 import ProductItem from "./ProducItem"
 
 const Products = () => {
+
+    const { products } = useContext(ProductContext)
+
     return (
         <div className="product-grid">
-            {ProductsData.map(product => <ProductItem {...product} key={product.id} />)}
+            {products.map(product => <ProductItem key={product.id} {...product} />)}
         </div>
     )
 }

@@ -12,7 +12,8 @@ export const ProductsData = [
 
     },
     {
-
+        id: 2,
+        isAddedToCart: false,
         title: "Special Item",
         img: img,
         price: 18.00,
