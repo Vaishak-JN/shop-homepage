@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 const ProductContextProvider = ({ children }) => {
     const [products, setProducts] = useState(ProductsData)
+    // const [cartItems, setCartItems] = useState([])
 
 
     console.log("hi")
@@ -22,14 +23,29 @@ const ProductContextProvider = ({ children }) => {
             }
         });
         setProducts(newProducts)
+        // setCartItems([...products.filter(p => p.isAddedToCart)])
+        // products.filter(p => p.isAddedToCart)
+    }
 
 
+    const removeItemFromCartHandler = (id) => {
+        const newProducts = products.map((product) => {
+            if (id === product.id) {
+                product.isAddedToCart = false
+                return product
+            } else {
+                return product
+            }
+        });
+        setProducts(newProducts)
     }
 
     const data = {
         products: products,
         addItem: addItemToCartHandler,
-        cartItems: products.filter(p => p.isAddedToCart).length
+        removeItem: removeItemFromCartHandler,
+        cartItemsLength: products.filter(p => p.isAddedToCart).length,
+        cartItems: products.filter(p => p.isAddedToCart)
     }
 
     // console.log(data)

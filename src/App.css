@@ -52,3 +52,7 @@
   padding:6px;
   border-radius: 5px;
 }
+.cart-modal{
+  border:0px !important;
+  outline: 0px !important;
+}

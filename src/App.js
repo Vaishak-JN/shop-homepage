@@ -7,10 +7,11 @@ import ProductContextProvider from './store.js/ProductContextProvider';
 
 
 function App() {
-  console.log("app")
+
   return (
     <ProductContextProvider>
       <Navbar />
+
       <Banner />
       <Products />
     </ProductContextProvider>
